@@ -1,0 +1,155 @@
+https://inkpx.com/templates/gwq/3d-green-gloss-text-effect
+
+InkPx
+
+Text
+
+Text:           KARNOV'S
+Font:           Georama Bold
+Size:           100
+Line Height:    120%
+Letter Spacing: 100%
+Align:          Center
+Split Style:    True
+
+
+Style Fill
+
+Type:           Gradient
+Gradient 1:     000%, #FF9008
+Gradient 2:     020%, #E8C020
+Gradient 3:     050%, #FFFFFF
+Gradient 4:     080%, #E8C020
+Gradient 5:     100%, #FF9008
+
+
+Inner Glow
+
+Color:          #E8C020
+Opacity:        100%
+Spread:         000%
+Strength:       100%
+
+
+Style 3D #1
+
+Type:           Gradient
+Gradient 1:     000%, #E8C020
+Gradient 2:     065%, #D83800
+Gradient 3:     100%, #400000
+
+Angle:          180
+Depth:          100%
+Opacity:        100%
+
+
+
+
+Text
+
+Text:           REVENGE
+Font:           Georama Bold
+Size:           100
+Line Height:    120%
+Letter Spacing: 100%
+Align:          Center
+Split Style:    True
+
+
+Style Fill
+
+Type:           Color
+Color:          #000000
+
+
+Stroke Outline
+
+Type:           Color
+Color:          #78E0FF
+Width:          40%
+Opacity:        100%
+Dash:           0
+
+
+Stroke Outline
+
+Type:           Color
+Color:          #3898FF
+Width:          40%
+Opacity:        100%
+Dash:           0
+
+
+Style 3D #1
+
+Type:           Gradient
+Gradient 1:     000%, #2858C8
+Gradient 2:     100%, #101888
+
+Angle:          180
+Depth:          100%
+Opacity:        100%
+
+
+
+Text
+
+Text:           REVOLUTION
+Font:           Georama Bold
+Size:           100
+Line Height:    120%
+Letter Spacing: 100%
+Align:          Center
+Split Style:    True
+
+
+Style Fill
+
+Type:           Color
+Color:          #000000
+
+
+Stroke Outline
+
+Type:           Color
+Color:          #FF1808
+Width:          40%
+Opacity:        100%
+Dash:           0
+
+
+Stroke Outline
+
+Type:           Color
+Color:          #D01000
+Width:          40%
+Opacity:        100%
+Dash:           0
+
+
+Style 3D #1
+
+Type:           Gradient
+Gradient 1:     000%, #A00800
+Gradient 2:     100%, #680000
+
+Angle:          180
+Depth:          100%
+Opacity:        100%
+
+
+
+
+
+
+Fonts
+
+Georama
+Genos
+Days One
+Blinker Bold
+Baloo 2
+Changa
+
+
+

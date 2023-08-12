@@ -1,0 +1,124 @@
+All characters supports 5 Attacks by default, OX only supports 3.
+
+Ray has only 4 attacks, 1 more can be added pretty easily.
+Feilin has only 4 attacks, 1 more can be added pretty easily.
+Ryoko has 5 attacks, not so easy to add more attacks.
+Matlok has only 3 attacks (2 overlaping), 2 more can be added pretty easily.
+Samchay has only 3 attacks (P + K is somewhere else), 2 more can be added pretty easily.
+Lee has only 4 attacks, 1 more can be added pretty easily.
+Mizoguchi has 5 attacks, not so easy to add more attacks.
+Jean has only 4 attacks, 1 more can be added pretty easily.
+Marstorius has 5 attacks, not so easy to add more attacks.
+Yungmie has 2 attacks (Mash K is somewhere else), 3 more can be added pretty easily.
+Zazie has only 4 attacks, 1 more can be added pretty easily.
+Clown has only 4 attacks, 1 more can be added pretty easily.
+Karnov has only 4 attacks, 1 more can be added pretty easily.
+Ox has 3 attacks, not so easy to add more attacks.
+
+
+To find the Special Attacks, execute the attack without pressing the button
+then WP 1036A0, 1, r, wpdata == BUTTON_TO_PRESS, then you press the button
+
+
+Ray Commands
+0165E0:
+
+Feilin Commands
+0165EF:   QCF + A / C
+0165F3:   B, DB, D + A / C (AIR)
+0165F7:   D, U + A / C
+0165FA:   DB, DF, DU + A / C
+
+Ryoko Commands
+0165FE:   HCF + A / C
+016602:   HCB + A / C
+016606:   D, D + A / C (after DF + C grab)
+01660A:   B, F + B / D
+01660D:   RHCB + A / C
+
+Matlok Commands
+016611:
+
+Samchay Commands
+01661A:
+
+Lee Commands
+016626:
+
+Mizoguchi Commands
+016637:
+
+Jean Commands
+01664B:
+
+Marstorius Commands
+016658:
+
+Yungmie Commands
+016668:
+
+Zazie Commands
+016670:
+
+Clown Commands
+016680:
+
+Karnov Commands
+01668C:
+
+Ox Commands
+01668C:
+
+
+
+
+01B40E
+01B4AC
+
+0166A8 (01671E) (D, U attack?)
+
+0166C6
+0163F6
+01699C
+
+
+Stopped at watchpoint 5 reading 10 from 1036A0 (PC=0001671E)
+Stopped at watchpoint 5 reading 10 from 1036A0 (PC=000166C6)
+Stopped at watchpoint 5 reading 10 from 1036A0 (PC=000163F6)
+Stopped at watchpoint 5 reading 10 from 1036A0 (PC=0001699C)
+
+
+
+Ray Commands
+0165E0:
+
+Feilin Commands
+0165EF:   QCF + A / C
+0165F3:   B, DB, D + A / C (AIR)
+0165F7:   D, U + A / C
+0165FA:   DB, DF, DU + A / C
+
+Ryoko Commands
+0165FE:   HCF + A / C
+016602:   HCB + A / C
+016606:   D, D + A / C (after DF + C grab)
+01660A:   B, F + B / D
+01660D:   RHCB + A / C
+
+
+
+
+Ray Move Code:          1B2CE
+Feilin Move Code:       1B40E
+Ryoko Move Code:        1B5C0
+Matlok Move Code:       1B776
+Samchay Move Code:      1B998
+Lee Move Code:          1BB24
+Mizoguchi Move Code:    1BC84
+Jean Move Code:         1BDEC
+Marstorius Move Code:   1BFD6
+Yungmie Move Code:      1C1F4
+Zazie Move Code:        1C3C2
+Clown Move Code:        1C5B8
+Karnov Move Code:       1C748
+Ox Move Code:           16438, add manually a place that will handle his special moves.

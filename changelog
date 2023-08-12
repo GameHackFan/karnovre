@@ -1,0 +1,253 @@
+****************************************************************************************
+Version 0.1 Changes
+****************************************************************************************
+
+- Ray changes:
+- Wheel Kick execution changed from QCB + Kick to RDP + Kick.
+- Wheel Kick Light Version landing recovery increased from 6 to 10 frames.
+- Air Wheel Kick Light Version landing recovery increased from 6 to 10 frames.
+- Added a new move called Dynamite Rush, similar to Dynamite Tackle without Strikeboxes.
+  The execution is F-F + Kick (idea from the FHD community, Golden_Shades).
+- Thunder Dynamite Tackle is now a revenge move.
+- Thunder Dynamite Tackle execution changed to 2x QCB + Punch.
+
+
+- Feilin changes:
+- Kakkuu Hakkaku Souhiken execution is now charge D-U + Kick (to reduce input conflict).
+- Kuuchuu Tourouzan execution is now QCF + Punch.
+- Dive kick air execution restriction changed, it is now easier to execute.
+  Previously you could only execute it when falling and the window was very narrow.
+- Dive kick behavior changed, it now causes knockdown and it can also be canceled.
+- Tourouzan animation changed, recovery reduced from 26 to 22 frames.
+- Kuuchuu Tourouzan Light Punch behavior changed, impulse limite changed from 600 to 400.
+- Kuuchuu Tourouzan Strong Punch behavior changed, impulse limite changed from 600 to 200.
+- Kakkuu Hakkaku Souhiken Light Punch animation changed.
+  1st active duration changed from 8 to 14 frames, which makes her travel more forward.
+- Kakkuu Hakkaku Souhiken Light Punch damage increased from 16 to 26.
+- Kakkuu Hakkaku Souhiken Strong Punch damage increased from 16 to 26.
+- Added a revenge move called Kakkuu Hakkaku Souhiken II, the execution is QCF-HCB + Kick.
+
+
+- Ryoko changes:
+- Animation 3AF Strikebox changed (Jump Light Kick active),
+  increased 8 pixels backwards and moved 3 pixels downwards.
+- Animation 3B0 Strikebox changed (Jump Strong Kick active),
+  increased 2 pixels upwards and downwards, and 6 pixels backwards.
+- Kataguruma execution changed to FDP or RDP.
+- Zenten Ukemi behavior changed from 3E0 to 5E0, it now travels further.
+- Animation 3E3 and 3E4 top hurtboxes removed (Zenten Ukemi can now go under fireballs).
+- Added a new move called Bakushin and the execution is F-F + Kick
+  (idea from the FHD community, Clayton Chapman).
+- Tateshihou Gatame is now a revenge move, the execution is 2x HCF or 2x HCB + Kick.
+- Tateshihou Gatame is now a instant grab.
+- Tateshihou Gatame range is 2 pixels smaller than Ippon Seoi.
+- Tateshihou Gatame now chokes 3 times, nothing less nothing more.
+- Tateshihou Gatame damage increased from 12 to 48 each choke.
+
+
+- Matlok Changes:
+- Animation 461 strikebox changed (Crouch Strong Kick)
+  Increased 4 pixels forward and 6 upwards.
+- Far Strong Punch animation changed, startup reduced from 12 to 8.
+- Crouch Strong Punch animation changed, 1st active increased from 1 to 2 frames.
+- Crouch Strong Punch animation changed, 2nd active reduced from 3 to 2 frames.
+- Dancing Head Press Strong Kick behavior changed, it now causes knockdown.
+- Dancing Head Press Strong Kick damage increased from 16 to 20.
+- Hurricane Strong Kick now causes less pushback.
+- Hurricane Strong Kick 2nd active now causes knockdown.
+- Overhead Kick Light Kick recovery reduced from 13 to 11 frames.
+- Overhead Kick Strong Kick recovery reduced from 12 to 10 frames.
+- Loop Hurricane is now a revenge move, its execution is charge D-QCF-UF + Kick.
+- Loop Hurricane now causes less pushback.
+- Loop Hurricane damage increased from 24 to 34.
+- Loop Hurricane 3rd+ active part now causes knockdown.
+- Added a new move called Walkover Kick, the execution is charge D-U + Punch.
+- Added a revenge move called Loop Walkover Kick, the execution is charge D-QCF-U + Punch.
+
+
+- Samchay changes:
+- Close Light Punch can now be canceled into other normals.
+  (idea from the FHD community, Golden_Shades).
+- Far Light Punch can now be canceled into other normals.
+  (idea from the FHD community, Golden_Shades).
+- Crouch Light Punch can now be canceled into other normals.
+  (idea from the FHD community, Golden_Shades).
+- Jump Light Punch can now be canceled into special moves.
+- Neutral Jump Light Punch can now be canceled into special moves.
+- Jump Strong Punch can now be canceled into special moves.
+- Neutral Jump Strong Punch can now be canceled into special moves.
+- Jump Light Kick can now be canceled into special moves.
+- Neutral Jump Light Kick can now be canceled into special moves.
+- Jump Strong Kick can now be canceled into special moves.
+- Neutral Jump Strong Kick can now be canceled into special moves.
+- F + Strong Kick can now be canceled into special moves.
+- Ti Kau Koun startup is no longer invulnerable.
+  Replaced Animations 4CE and 525 by the newly created animations B6A and B6B.
+  These new animations are basically replicas of 4CE and 525 with hurboxes.
+  Changed animation 526 to 528, similar animation but with hurtboxes.
+- Ti Kau Koun Air Recovery animation duration changed from 5 to 64 frames.
+  It doesn't affect this move at all, nothing changes.
+  Change made to allow this same animation to be used for an aerial version of this move.
+- Pap So Cau Light Punch startup animation increased from 10 to 12 frames.
+  Change made so he can travel further.
+- Pap So Cau Strong Punch startup animation increased from 12 to 14 frames.
+  Change made so he can travel further.
+- Added a new move, the Air Ti Kau Koun, the execution is also QCF + Kick.
+  (idea from the FHD community, Golden_Shades).
+- Ti Kau Roi execution is now charge RDP + Kick.
+- Added a revenge move called Pap So Cau II, the execution is QCF-HCB + Punch.
+
+
+- Lee changes:
+- Super Zesshouhohou Strong Punch recovery increased from 12 to 14 frames.
+- Super Zesshouhohou Strong Punch traslation speed changed from 1000 to C00.
+  It now travels a little bit less distance.
+- Mouko Kouhazan is now a revenge move, its execution is 2x QCB + Punch.
+- Added a new air move called Long Ti, the execution is QCB + Kick in the air.
+  (idea from the FHD community, Golden_Shades).
+- Added a revenge move called Chou Shinchuu Tetsuzankou, the execution is 2x QCB + Kick.
+
+
+- Mizoguchi changes:
+- Koryuusai execution changed from D-DB-D to RDP + Punch.
+- P2 vs P1 Zazie Strong Kick grab bug fixed.
+- Close Strong Kick 1st active is no longer cancelable.
+- Tiger Bazooka startup reduced from 21 to 20 frames.
+- Tiger Bazooka recovery reduced from 30 to 29 frames.
+- Kuuchuu Renzoku Keri last move is now an overhead.
+  (idea from the FHD community, Clayton Chapman).
+- Kuuchuu Renzoku Keri last move startup increased from 2 to 4 frames, to avoid blockstring.
+- Koryuusai Light Punch recovery increased from 11 to 15 frames.
+- Koryuusai Strong Punch aimation changed.
+  Changed Animation 65F to 65E, similar animation but without hurtboxes.
+  2nd active duration increased from 2 to 4 frames, it goes further now.
+- Koryuusai Strong Punch pushback reduced.
+- Gottsui Tiger Bazooka is now a revenge move, its execution is 2x QCF + Punch.
+- Tsuutensai is now a revenge move, its execution is 2x QCB + Punch.
+- Tsuutensai startup animation now translates forward.
+- Tsuutensai 1st active animation now translates forward.
+- Tsuutensai 2nd active duration changed from 2 to 14 frames, it translate a lot forward.
+- Tsuutensai 2nd active damage increased from 18 to 32.
+- Tsuutensai 3rd+ active damage increased from 24 to 42.
+- Tsuutensai grab active damage decreased from 8 to 1.
+
+
+- Jean changes:
+- Animation 987 hurtbox changed, added a hurtbox on his hand (Far Strong Punch)
+- Animation 996 hurtbox changed, added a hurtbox on his head and hand (Crouch Strong Punch)
+- Normals to Needle Shower cancel massive damage bug fixed. 
+- Needle Shower execution changed from ABCD to 2 Punch.
+- Needle Shower Tapping damage increased from 10 to 14.
+- Added a new move called Backflip, it is the 2nd part of Rondat.
+  The execution is charge D-U + Punch.
+- Rondat is now a revenge move, 2nd part was removed, its execution is charge B-QCF + Kick.
+- Rondat is now an overhead.
+- Rondat behavior was heavily changed, it behaves similarly to Wheel Kick.
+- Rondat any hit now causes a knockdown.
+- Rondat amount of frames to charge reduced from 64 to 40.
+
+
+- Marstorius changes:
+- Drill Power Slam execution changed upside down HCB or HCF to FDP or RDP + Punch.
+- Drill Power Slam damage reduced from 120 to 78.
+- Dash Lariat amount of frames to charge reduced from 64 to 40.
+- Kneel Kick execution changed from charge B-F to QCB + Kick.
+- Animation A86 hurtbox changed (Kneel Kick).
+  Moved lower hurtbox to his top foot.
+  Modified it in a way that leaves him more exposed for air attacks.
+  (idea from the FHD community, Golden_Shades).
+- Animation A87 hurtbox changed (Kneel Kick).
+  Moved lower hurtbox to his top foot.
+  Modified it in a way that leaves him more exposed for air attacks.
+  (idea from the FHD community, Golden_Shades).
+- Kneel Kick Light Kick recovery increased from 21 to 25.
+- Kneel Kick Strong Kick recovery increased from 22 to 26.
+- Enzui Giri translation changed from 100 and 100 to 400 and 400.
+  It is now a better move to go over fireballs.
+- Moonsault Press Light Punch translation changed from 200 and 200 to 300 and 300.
+  (idea from the FHD community, Golden_Shades).
+- Moonsault Press Light Punch translation changed from 200 and 200 to 400 and 400.
+  (idea from the FHD community, Golden_Shades).
+- Added a revenge move called Triple Dash Lariat, the execution is charge B-QCF + Kick.
+
+
+- Yungmie changes:
+- Neri Chagi execution changed from F-DB-DF to FDP + Kick.
+- Fire Binta execution changed from 7 taps to 5 taps.
+  (idea from the FHD community, Golden_Shades).
+- Added a new move called Foot Rush, very similar to the Super Nintendo version.
+  The execution is QCB + Kick, like in the SNES.
+- Added a revenge move called Grand Foot Rush, the execution is QCB-HCF + Kick.
+
+
+- Zazie changes:
+- Animation 7DF hurboxes changed, removed all hurtboxes (Hellfire).
+- Hellfire execution changed from B-DB-D to FDP + Punch.
+- Hellfire Light Punch recovery increased from 19 to 25.
+- Hellfire Strong Punch recovery increased from 19 to 23.
+- Vulcan Hook execution changed from ABCD to 2 Punch.
+- Normals to Vulcan Hook cancel massive damage bug fixed.
+- Deshi Kakato execution changed from U-D to D-U + kick.
+- Deshi Kakato Strong Kick is now an overhead.
+  (idea from the FHD community, Golden_Shades).
+- Deshi Kakato Strong Kick no longer has a 2nd active part.
+  Created the animation B70, similar to AB0 but without strikebox.
+  Replaced the AB0 with the animation B70.
+- Added a revenge move called Hell Deshi Kakato, the execution is QCF-HCB + Kick.
+
+
+- Clown changes:
+- All his charge moves now have no diagonal charge restrictions.
+- Animation 88D Strikebox increased 4 pixels downward (Headstomp active).
+- Crouch Strong Punch 2nd active part now uses animation 856 instead of 857.
+  It has better Hurtboxes.
+- Far Strong Kick animation changed, it is now 14-6-6 of startup, active, recovery.
+- Far Strong Kick behavior changed, it now translates forward.
+  (idea from the FHD community, Golden_Shades).
+- Added a new move called Pick-A-Fake-Card, basically a fake fireball.
+  The execution is QCB + Punch (there are no more charge moves available).
+  (idea from the FHD community, Golden_Shades).
+- Added a new move called Tricked and it can only be executed after executing Head Stomp.
+  Press Kick to execute it before Head Stomp is in its active phase.
+  (idea from the FHD community, Toast Rider).
+- Added a revenge move called Spin Kick, the execution is charge B-QCF-UF + Kick.
+
+
+- Karnov changes:
+- Crouch Light Kick can now be canceled into other normals.
+  (idea from the FHD community, Golden_Shades).
+- Crouch Strong Kick hyper speed translation A.K.A teleport bug is now fixed.
+- Balloon Attack execution changed from QCB-UF to QCB + Punch.
+- Balloon Attack the end of the startup is no longer invulnerable.
+  Replaced the animation 92E by the newly created animation B6C.
+  The new animation B6C is a replica of 92E but with hurtboxes.
+- Super 100 Kick execution changed from charge B-F to QCB + Kick.
+- Super 100 Kick now causes less pushback, to improve the chance of all hits connecting.
+- Super 100 Kick now causes less hitstun, to fix the infinite.
+- Added a new move called Glitch the execution is RDP / FDP + Kick, now he has a real teleport.
+- Added a revenge move called Super 100 Attack, the execution is charge QCB-HCF + Kick.
+
+
+- Select Screen changes:
+- Punch buttons confirm the character you're selecting.
+- Kick buttons change the character color.
+- The game will draw the character sprite, so you can see the color being selected.
+- Hold Start button to random select your character.
+  The game will randomize your character again everytime it goes back to the select screen.
+- For Player vs CPU, the game will randomize the CPU color.
+
+
+- Game changes:
+- For Player vs Player, the game will randomize the stage.
+- Characters now have to take 5 hits on their Weak Spot to go dizzy.
+- Hit on Weak Spot now does 25% more damage instead of 50%.
+- Every character now has at least 1 Revenge Move.
+- Revenge Moves can only be executed when you have less than 50% of your HP.
+  (don't trust the lifebar it is unreliable, it shows around 42%-)
+- Revenge Moves can be executed only once per round.
+- An indicator next to your lifebar is displayed when you're able to execute a Revenge Move.
+
+
+****************************************************************************************
+
+****************************************************************************************

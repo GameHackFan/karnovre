@@ -1,0 +1,12 @@
+101420:   Sprite memory region. (XXYY PSSS)
+          X: position X
+          Y: position Y
+          S: Sprite ID
+          P: Pallete ID (2, 3, 4, A, C are good palletes)
+          Example: 71E6 2352 (P1 Ray's R)
+
+
+
+
+P1 super indicator:   7025 2353
+P1 super indicator:   74C5 2353

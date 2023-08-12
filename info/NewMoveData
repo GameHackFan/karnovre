@@ -1,0 +1,97 @@
+00B8F6:   Move Behavior Code Pointers (Add Attack ID * 4)
+0641C0:   List of Values Used For Damage and Behavior (Add Attack ID - 20 Shift Left 2)
+016A14:   List of Values Used For Behavior 2 (Add Attack ID * 4, Stun, etc)
+          AAAA AAAA   GHIJ KLMN   ?P?? ????   ???? ?1??   (Bits)
+          A: Audio ID
+          M: Activates Attack Behavior (that also ends up playing the audio)
+          1: Grab (0 disabled, 1 enabled).
+          Z: Must be blocked crouched if active.
+003BB4:   Code that handles 641C0 data (3BCC, use it to find the address you want to edit)
+          GHIJ KLMN   OPQR STUV   AAAA AAAA   DDDD DDDD   (Bits)
+          A: Audio ID
+          D: Damage Value
+          G: Enemy Burning Effect.
+          O: Blockable (0 disabled, 1 enabled)
+          P: No Stun (0 disabled, 1 enabled)
+          Q: Strong Push Back (0 disabled, 1 enabled)
+          R: Very Strong Push Back (0 disabled, 1 enabled)
+019476:   Code that handles 16A14 data (19528, use it to find the address you want to edit)
+          XXXX XXXX   ???? ????   ???? ????    ???? ????   (Bits)
+          X: Translation X
+037014:   List of Animations Values (Add (Animation ID * 48) - 4)
+          00: Sprite ID (4 bytes)
+          04: Physicsbox Value (4 bytes, 1 box)
+          08: Hurtbox Values (4 Bytes, 6 boxes)
+          20: Weak Spot Hurtbox Values (4 Bytes, 1 Box)
+          24: Strikebox Values (4 Bytes, 1 Box)
+          28: Throwbox??? Values (4 Bytes, 1 Box)
+019716:   List of values used for Behavior 3 (Speed, next animation, extensions at 21A06 id 68C).
+
+
+New Move Full Animation
+
+IIII IIII MNOP QRST DDDD DDDD   (Bits)
+
+I: Animation ID.
+D: Animation Duration.
+M: Plays the move audio.
+N: If the move has translation, it sets the translation value to 0.
+S: Causes knockdown if active.
+Q: Allow the move to be canceled if active.
+
+
+           
+
+
+0B69:     First empty space animation ID (593C0)
+
+
+0B70:     First empty space animation ID (593C0)
+
+
+
+Yungmie
+
+01C2EE:   Checks if Dragon Punch was executed
+
+D6 values
+2D: Fireball
+2E: Dragon Punch
+2F: Unused
+30: Unused
+31: Unused
+
+D7 values
+1E5: Air Fireball
+1E6: Dragon Punch LK
+1E7: Dragon Punch SK
+1E8: L + P Mash
+1E9: Unused
+1EA: Wall Jump
+1EB: Down + C (Wall Jump Folower)
+1EC: Unused
+1ED: Unused
+1EE: Unused
+1EF: Unused
+
+
+
+SNES Data
+
+Yungmie QCB:          73A, 73B, 73C, 73D, 73E, 73F, 740, 741, 742
+                      743, 744, 745, 746
+Matlok:               465, 466, 467, 468
+                      46D, 46E, 46F, 470
+Ox:                   AC5
+
+
+
+
+
+
+1953A:        Reads Behavior 2 data.
+195C4:        Plays the attack audio.
+
+
+
+"99", "82", "00", "00"     Behavior 2 Plays an audio

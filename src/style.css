@@ -1,0 +1,191 @@
+html
+{
+  height: 100vh;
+}
+
+body
+{
+  color: #F0F0F0;
+  background-color: #705820;
+  font-family: sans-serif;
+
+  min-height: 100vh;
+
+  margin: 0;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../image/karnovre_bg.png');
+}
+
+.main
+{
+  display: flex;
+  flex-direction: column;
+  
+  min-width: 100vw;
+  min-height: 100vh;
+  
+  margin: 0;
+}
+
+.componentBox
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+
+  margin: auto;
+  padding: 4px;
+
+  color: white;
+  background-color: #000000D0;
+  box-shadow: 0 0 4px 2px #20202080;
+
+  min-width: 80%;
+}
+
+.header
+{
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 10px;
+}
+
+.header img
+{
+  margin-top: 1rem;
+  height: 10rem;
+}
+
+.footer
+{
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.footer > a
+{
+  color: #F0F0F0;
+  font-size: 1.4em;
+  font-weight: bold;
+
+  margin-left: 10px;
+  margin-right: auto;
+
+  outline: none;
+}
+
+.footer > label
+{
+  color: #F0F0F0;
+  font-size: 1.4em;
+  font-weight: bold;
+
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.patch
+{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.patch .information
+{
+  display: block;
+  width: 40%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: justify;
+}
+
+.patch div
+{
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 40%;
+}
+
+.patch div .button:first-child
+{
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.patch div .button:last-child
+{
+  margin-right: auto;
+}
+
+.patch input[type="file"]
+{
+  display: none;
+}
+
+.button
+{
+  color: #F0F0F0;
+  background: #104068;
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: 0.8em;
+  padding: 6px 8px;
+  
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.button:hover
+{
+  background: #705820;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+}
+
+.result
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  min-width: 100%;
+}
+
+.message
+{
+  color: #705820;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.errorMessage
+{
+  color: #E02200;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto; 
+}

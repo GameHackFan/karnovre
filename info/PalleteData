@@ -1,0 +1,33 @@
+065800:   Ray 1st Color (ROM)
+065A00:   Ray 2nd Color (ROM)
+
+
+402800:   Ray 1st Color (Video)
+402A00:   Ray 2nd Color (Video)
+403BC0:   Ox 1st Color (Video)
+
+
+403000:   Ray Portrait 1st Color (Video)
+403280:   Ray Portrait 2nd Color (Video)
+
+
+
+
+
+Ray:          1 Pallete
+Feling:       2 Palletes
+Ryoko:        1 Pallete
+
+Matlok:       2 Palletes
+Samchay:      1 Pallete
+Lee:          1 Pallete
+
+Mizoguchi:    1 Pallete
+Jean:         2 Palletes
+Marstorious:  1 Pallete
+
+Yungmie:      2 Pallete
+
+Zazie:        2 Palletes
+Clown:        1 Pallete
+Karnov:       2 Palletes

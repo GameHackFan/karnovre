@@ -1,0 +1,23 @@
+103670:   P1 Character Memory Region.
+
+
+xxxx92:   Animation ID.
+xxxxB8:   Select Screen Character Confirmed (2nd bit is active if confirmed)
+xxxxC0:   Position X
+xxxxC4:   Position Y
+xxx191:   Animation Duration.
+xxx147:   Character Health
+xxx150:   Select Screen Active Flag (64 Player is Active, A0 Player is Inactive)
+
+
+
+
+106732:   Select Screen Timer
+106932:   Stage ID
+103424:   Camera Position
+10FE88:   Frames Passed
+103A70:   Round Timer
+
+
+106B5E:   Players Coins
+
