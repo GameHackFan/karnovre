@@ -22,5 +22,3 @@ WHAT'S NEXT: Well, this is the first version of this hack, it might still be ver
 
 A special thanks for the FHD community for their balance ideas.
 <br/><br/>
-
-A special thanks for the FHD community for their balance ideas.
