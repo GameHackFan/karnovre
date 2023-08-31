@@ -246,6 +246,7 @@ Version 0.1 Changes
   (don't trust the lifebar it is unreliable, it shows around 42%-)
 - Revenge Moves can be executed only once per round.
 - An indicator next to your lifebar is displayed when you're able to execute a Revenge Move.
+- P1 1 frame of strike hit freeze disadvantage bug fixed, both players now have the same amount of hit freeze frames.
 
 
 ****************************************************************************************
