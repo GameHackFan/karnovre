@@ -17,7 +17,7 @@ Known Bugs:
 <br/><br/>
 
 
-WHAT'S NEXT: Well, this is the first version of this hack, it might still be very unbalanced, so maybe newer versions improving things might be needed.
+WHAT'S NEXT: I don't know, I am not doing any Reverse Engineering stuff lately.
 <br/><br/>
 
 A special thanks for the FHD community for their balance ideas.
