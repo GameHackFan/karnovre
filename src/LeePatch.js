@@ -30,6 +30,27 @@ const leePatch =
     // Reduced 5 pixels and moved backward 4 pixels 
     // "293924": ["D0", "2C", "0C", "24"],
 
+   
+    // Chou Shinchuu Animation Behavior Changed
+    // From 8152 0B20 to 8152 0B26
+    // Damage decreased from 32 to 38
+    "411120": ["81", "52", "0B", "26"],
+
+    // Tetsuzankou Animation Behavior Changed
+    // From 8352 A01C to 8352 A018
+    // Damage decreased from 28 to 24 
+    "411124": ["83", "52", "A0", "18"],
+
+    // Zesshouhohou Animation Behavior Changed
+    // From 0155 0B20 to 0155 0B1C
+    // Damage decreased from 32 to 28
+    "411092": ["01", "55", "0B", "1C"],
+
+    // Super Zesshouhohou Animation Behavior Changed
+    // From 0155 0B20 to 0155 0B18
+    // Damage decreased from 32 to 24
+    "411096": ["01", "55", "0B", "18"],
+
     // Super Zesshouhohou Strong Version Recovery Animation Chunk Behavior Changed
     // From 0202 to 0204
     // Recovery Chunk increased from 2 to 4 (Full was 12, now it is 14)
@@ -88,10 +109,10 @@ const leePatch =
       "83", "12", "11", "1F",
       
       // New Move 1 Light Version
-      "83", "62", "11", "10",
+      "83", "52", "11", "10",
       
       // New Move 1 Strong Version (Unused)
-      "83", "62", "11", "10"
+      "83", "52", "11", "10"
     ],
 
     // New Moves Behavior 2 Data
@@ -169,9 +190,10 @@ const leePatch =
     // New Move 1 Interpretation
     "1041712":
     [
+      "68", "0C", "38", "00", "C4", "00", "1E", "65",
       "01", "7C", "B9", "4E", "01", "00", "A8", "66",
       "86", "4A", "12", "66", "3C", "3E", "32", "01",
-      "25", "7C", "00", "61", "0C", "0F", "40", "DC",
+      "25", "7C", "00", "61", "04", "0F", "40", "DC",
       "F9", "4E", "01", "00", "50", "BC", "F9", "4E",
       "01", "00", "82", "BC"
     ],

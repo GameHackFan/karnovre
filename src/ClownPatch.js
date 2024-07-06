@@ -28,6 +28,12 @@ const clownPatch =
 
 
 
+    // Close Strong Punch Proximity Changed from 40 to 3C
+    // Reduced from 64 to 60 pixels, same as Close Strong Kick
+    "91332": ["3C"],
+
+
+
     // Crouch Strong Punch Active Animation Chunk Changed
     // From 5708 to 5608, animation changed
     // 2nd active chunk is now the same animation as the 1st active chunk
@@ -168,20 +174,24 @@ const clownPatch =
       "71", "4E", "71", "4E", "71", "4E", "71", "4E"
     ],
 
-    // Add Support To New Moves Inputs
-    "116358": ["F9", "4E", "0F", "00", "00", "EB"],
+    // Add Support To New Moves Inputs (Kick Button)
+    "116340":
+    [
+      "F9", "4E", "0F", "00", "00", "EB", "06", "7C",
+      "28", "7A", "00", "61", "7C", "A0", "86", "4A"
+    ],
 
     // New Move 3 Interpretation (Spin Kick)
     "1043200":
     [
       "28", "0C", "7F", "00", "47", "01", "2C", "62",
-      "28", "4A", "FF", "01", "26", "66", "09", "7C",
+      "28", "4A", "FF", "01", "26", "66", "0C", "7C",
       "B9", "4E", "01", "00", "A8", "66", "86", "4A",
       "1A", "66", "3C", "3E", "54", "02", "37", "7C",
       "7C", "31", "00", "07", "F0", "01", "A8", "42",
       "F2", "01", "68", "42", "FC", "01", "F9", "4E",
-      "01", "00", "EE", "C6", "F9", "43", "01", "00",
-      "88", "64", "F9", "4E", "01", "00", "8C", "C6"
+      "01", "00", "EE", "C6", "F9", "4E", "01", "00",
+      "7A", "C6"
     ],
 
     // New Move 1 Interpretation (Pick-A-Fake-Card)
@@ -196,11 +206,11 @@ const clownPatch =
     // New Move 2 Execution (Tricked)
     "1043392":
     [
-      "28", "0C", "03", "00", "20", "01", "16", "62",
+      "28", "0C", "03", "00", "20", "01", "18", "62",
       "28", "10", "B1", "00", "7C", "C0", "C0", "00",
-      "0C", "67", "3C", "30", "00", "F0", "68", "81",
-      "30", "01", "68", "81", "32", "01", "F9", "4E",
-      "01", "00", "14", "A8"
+      "0E", "67", "08", "E8", "00", "44", "00", "52",
+      "40", "11", "30", "01", "40", "11", "32", "01",
+      "F9", "4E", "01", "00", "14", "A8"
     ]
   }
 }

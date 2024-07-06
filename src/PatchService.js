@@ -20,6 +20,7 @@ class PatchService
       romService.cloneROM();
       romService.applyPatch(gamePatch);
       romService.applyPatch(palletePatch);
+      romService.applyPatch(stagePalletePatch);
       romService.applyPatch(clownPatch);
       romService.applyPatch(feilinPatch);
       romService.applyPatch(leePatch);

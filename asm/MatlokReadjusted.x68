@@ -5,13 +5,15 @@
 * Description:  All changes made to the code of Matlok Jade.
 *----------------------------------------------------------------------------------------------
 
-; ORG         $1B7A6                    ; Replace 1B7A6 (There is space to replace everything).
+; ORG         $1B79E                    ; Replace 1B79E (There is space to replace everything).
 
                                         ; Block of code that adds the interpretation of the new moves.
   JMP         $FE380                    ; Jumps to the code that handles the interpretation of the new moves.
+  TST.B       ($149, A0)                ; Compares 0 and ($149, A0), fireball flag.
+  BNE         $1B7DA                    ; If it is not 0, active fireball, go to the next move to interpret.
   MOVEQ       #$6, D6                   ; Code from the original game readjusted.
   MOVEQ       #$28, D5                  ; Code from the original game readjusted.
-  BSR         $166FC                    ; Code from the original game readjusted.
+  JSR         $166FC                    ; Code from the original game readjusted.
   TST.L       D6                        ; Code from the original game readjusted.
 
 
@@ -39,7 +41,7 @@
   CLR.L       ($1F2, A0)                ; Clears ($1F2, A0), no extra sound to play.
   CLR.W       ($1FC, A0)                ; Clears ($1FC, A0), default move code behavior (1A49A).
   JMP         $1B93E                    ; Jumps to the code that executes Walkover Kick.
-  JMP         $1B7AC                    ; Jumps back to where it stopped in the original code.
+  JMP         $1B7A4                    ; Jumps back to where it stopped in the original code.
 
 
 ; ORG         $FE340
@@ -83,8 +85,19 @@
   JMP         $FE300                    ; Jumps to the code that handles the execution of other move.
 
 
+; ORG         $FE3E0
+
+                                        ; Block of code that adds extra translation to moves the player can control.
+  MOVEQ       #$3, D0                   ; Stores 3 inside D0, the extra translation speed.
+  SWAP        D0                        ; Invert D0 higher and lower bits, 3 to 30000.
+  JSR         $1A7F0                    ; Calls the code that applies the extra translation.
+  JMP         $1A5B8                    ; Jumps to the code that executes the move.
+
+
 ; All routines for the readjusted version of Matlok.
 ; 
-; 01B7A6:   Add Support To New Moves Inputs
+; 01B79E:   Add Support To New Moves Inputs
 ; 0FE300:   New Move 1 Interpretation (Walkover Kick)
+; 0FE340:   New Loop Hurricane Interpretation
 ; 0FE380:   New Move 2 Interpretation (Loop Walkover Kick)
+; 0FE3E0:   Adds Better Player Control To Some Moves (Dancing Head Press)

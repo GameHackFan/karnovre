@@ -19,6 +19,7 @@ const yungmiePatch =
     "115504": ["05"],
 
 
+
     // New Animation B6E Identical to 6D3 But Without The Grab Hitbox (New Move 2)
     "365744":
     [
@@ -96,6 +97,11 @@ const yungmiePatch =
       "00", "00", "00", "00", "41", "0B", "00", "00"
     ],
 
+    // Animation 6EB Hitboxes Changed (Crouch Strong Punch)
+    // Hurtbox increased from D73C 1410 to D33C 1910
+    // Increased 9 pixels upwards and 1 pixel downwards
+    "310332": ["D3", "3C", "19", "10"],
+
 
 
     // New Moves Behavior Code Offsets
@@ -170,7 +176,7 @@ const yungmiePatch =
       "E2", "06", "10", "04", "E1", "06", "00", "04",
 
       "9A", "06", "00", "02", "3E", "07", "90", "03",
-      "3F", "07", "12", "06", "40", "07", "12", "04",
+      "3F", "07", "12", "06", "40", "07", "12", "06",
       "41", "07", "02", "04", "42", "07", "05", "02"
     ],
 

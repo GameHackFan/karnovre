@@ -5,12 +5,14 @@
 * Description:  All changes made to the code of Ray McDougal.
 *----------------------------------------------------------------------------------------------
 
-; ORG         $1B2FE                    ; Replace 1B2FE (There is space to replace everything).
+; ORG         $1B2F6                    ; Replace 1B2F6 (There is space to replace everything).
 
                                         ; Block of code that adds the interpretation of the new moves.
   JMP         $FE000                    ; Jumps to the code that handles the interpretation of the new moves.
+  TST.B       ($149, A0)                ; Compares 0 and ($149, A0), fireball flag.
+  BNE         $1B32E                    ; If it is not 0, active fireball, go to the next move to interpret.
   MOVEQ       #$0, D6                   ; Code from the original game that was replaced.
-  BSR         $166A8                    ; Code from the original game readjusted.
+  JSR         $166A8                    ; Code from the original game readjusted.
   TST.L       D6                        ; Code from the original game readjusted.
 
 
@@ -49,7 +51,7 @@
   TST.L       D6                        ; Compares 0 and D6.
   BNE         $FE020                    ; If it is not 0, the move wasn't executed, go to the last line.
   JMP         $1B370                    ; Jumps to the code that executes Thunder Dynamite Tackle.
-  JMP         $1B304                    ; Jumps back to where it stopped in the original code.
+  JMP         $1B2FC                    ; Jumps back to where it stopped in the original code.
 
 
 ; ORG         $FE040
@@ -71,7 +73,7 @@
 
 ; All routines for the readjusted version of Ray.
 ; 
-; 01B2FE:   Add Support To New Moves Inputs (Punch Button)
+; 01B2F6:   Add Support To New Moves Inputs (Punch Button)
 ; 01B33E:   Removes Default Thunder Dynamite Tackle Execution
 ; 01B39C:   Add Support To New Moves Inputs (Kick Button)
 ; 0FE000:   New Thunder Dynamite Tackle Interpretation

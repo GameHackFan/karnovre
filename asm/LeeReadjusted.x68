@@ -45,10 +45,12 @@
 ; ORG         $FE530
 
                                         ; Block of code that handles the execution of Long Ti.
+  CMP.W       #$38, ($00C4, A0)         ; Compares 38 and ($C4 + A0), minimum height required to dive.
+  BCS         $FE556                    ; If it is less than 38, do not execute the dive, go to the last JMP.
   MOVEQ       #$1, D6                   ; Stores 1 inside D6, QCB input ID.
   JSR         $166A8.L                  ; Calls the routine that interprets the move execution.
   TST.L       D6                        ; Compares 0 and D6.
-  BNE         $FE54E                    ; If it is not 0, the move wasn't executed, go to the last line.
+  BNE         $FE556                    ; If it is not 0, the move wasn't executed, go to the last line.
   MOVE.W      #$132, D7                 ; Stores 132 inside D7, New Move 1 ID (Long Ti).
   MOVEQ       #$25, D6                  ; Stores 25 inside D6, behavior 3 ID.
   BSR         $FF450                    ; Calls the code that calculates the move shift amount.

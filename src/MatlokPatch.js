@@ -7,7 +7,7 @@ const matlokPatch =
   data:
   {
     // Spinning Wave Input ID Change (B-F)
-    "112550": ["06"],
+    // "112550": ["06"],
 
     // Road Hurricane, Loop Hurricane Input ID Change (D-U)
     "112612": ["07"],
@@ -17,17 +17,46 @@ const matlokPatch =
 
 
 
+    // Animation 459 Hitboxes Changed (Crouch Strong Punch)
+    // Removed head hurtbox
+    // Changed top hurtbox, reduced 4 pixels upwards
+    // Changed weakspot hurtbox, reduced 19 pixels upwards, increased 1 pixel downwards
+    "278720":
+    [
+      "0B", "06", "06", "03", "E6", "00", "1A", "0E",
+      "00", "00", "00", "00", "B2", "1B", "09", "10",
+      "00", "00", "00", "00", "CC", "0F", "0E", "10",
+      "EF", "03", "11", "11", "00", "00", "00", "00",
+      "AD", "23", "04", "08", "C2", "1E", "1B", "19",
+      "00", "00", "00", "00", "0F", "06", "00", "00"
+    ],
+
     // Animation 461 Hitboxes Changed (Crouch Strong Kick)
     // Strikebox increased from E93C 171E to E63E 1A20 
     // Increased 4 pixels forward and 6 pixels upwards
     "279140": ["E6", "3E", "1A", "20"],
 
+    // Animation 497 Hitboxes Changed (Dancing Head Press)
+    // Strikebox increased from EC00 0F0F to EE00 1210 
+    // Increased 5 pixels downwards, 1 upwards, 1 to the left and 1 to the right.
+    "281732": ["EE", "00", "12", "10"],
+
 
 
     // Far Strong Punch Startup Animation Chunk Behavior Changed
+    // From 0002 to 0001
+    // Startup Chunk reduced from 2 to 1 (Full was 12, now it is 8)
+    "376470": ["00", "01"],
+
+    // Far Strong Punch Startup Animation Chunk Behavior Changed
+    // From 0002 to 0001
+    // Startup Chunk reduced from 2 to 1 (Full was 12, now it is 8)
+    "376474": ["00", "01"],
+
+    // Far Strong Punch Startup Animation Chunk Behavior Changed
     // From 0006 to 0004
-    // Startup Chunk reduced from 6 to 2 (Full was 12, now it is 8)
-    "376482": ["00", "02"],
+    // Startup Chunk reduced from 6 to 4 (Full was 12, now it is 8)
+    "376482": ["00", "04"],
 
     // Crouch Strong Punch Active Animation Chunk Behavior Changed
     // From 8A01 to 8A02
@@ -39,17 +68,45 @@ const matlokPatch =
     // 2nd active Chunk decreased from 3 to 2 (Full was 12, and it is still 12)
     "376566": ["0A", "02"],
 
+    // Dancing Head Press Animation Behavior Changed
+    // From FF80 to FFE0
+    // It causes less impulse backwards.
+    "105038": ["E0", "FF", "E0", "FF"],
+
+    // Dancing Head Press Animation Behavior Changed
+    // From 0D00 to 0800
+    // It causes less impulse upwards.
+    "105046": ["00", "08"],
+
+    // Dancing Head Press Light Kick Code Behavior Changed From 1A5B8 to FE3E0
+    // It applies extra translation if the player is holding left or right.
+    "48170": ["0F", "00", "E0", "E3"],
+
     // Dancing Head Press Strong Kick Animation Behavior Changed
     // From 0022 0510 to 0222 0514
     // It causes knockdown and the damage was increased from 16 to 20.
     "410744": ["02", "22", "05", "14"],
 
-    // Hurricane Strong Kick Animation Behavior Changed
+    // Dancing Head Press Strong Kick Code Behavior Changed From 1A5B8 to FE3E0
+    // It applies extra translation if the player is holding left or right.
+    "48178": ["0F", "00", "E0", "E3"],
+
+    // Road Hurricane Strong Kick Animation Behavior Changed
     // From 03D2 1118 to 0312 1118
     // It pushes the opponent less when it hits.
     "410716": ["03", "12", "11", "18"],
 
-    // Hurricane Strong Kick Active Animation Chunk Behavior Changed
+    // Road Hurricane Strong Kick Animation Behavior Changed
+    // From 0B00 0B00 to 0980 0980
+    // It causes less impulse upwards.
+    "104946": ["80", "09", "80", "09"],
+
+    // Road Hurricane Strong Kick Active Chuck Duration
+    // From 0207 to 0204
+    // Reduced 3 frames to better fit the less impulse change.
+    "390442": ["02", "04"],
+
+    // Road Hurricane Strong Kick Active Animation Chunk Behavior Changed
     // From 8001 to 8201, it now causes a knockdown (2nd hit)
     "390418": ["82", "01"],
 
@@ -130,10 +187,10 @@ const matlokPatch =
     "410768":
     [
       // New Move 1 Light Version
-      "03", "D2", "11", "28",
+      "03", "D2", "11", "24",
       
       // New Move 1 Strong Version (Unused)
-      "03", "D2", "11", "28",
+      "03", "D2", "11", "24",
       
       // New Move 2 Light Version
       "03", "D2", "11", "24",
@@ -164,7 +221,7 @@ const matlokPatch =
       "54", "04", "00", "03", "53", "04", "02", "03",
       "52", "04", "92", "03", "51", "04", "12", "02",
       "50", "04", "12", "03", "4F", "04", "02", "04",
-      "F5", "03", "02", "08", "F6", "03", "03", "03"
+      "F5", "03", "02", "09", "F6", "03", "03", "04"
     ],
 
     // New Move 2 Light Version Animation
@@ -189,10 +246,11 @@ const matlokPatch =
 
 
     // Add Support To New Moves Inputs (Punch Button)
-    "112550":
+    "112542":
     [
-      "F9", "4E", "0F", "00", "80", "E3", "06", "7C",
-      "28", "7A", "00", "61", "4A", "AF", "86", "4A"
+      "F9", "4E", "0F", "00", "80", "E3", "28", "4A",
+      "49", "01", "30", "66", "06", "7C", "28", "7A",
+      "B9", "4E", "01", "00", "FC", "66", "86", "4A"
     ],
 
     // Add Support To New Moves Inputs (Kick Button)
@@ -211,7 +269,7 @@ const matlokPatch =
       "D4", "00", "37", "7C", "7C", "31", "00", "09",
       "F0", "01", "A8", "42", "F2", "01", "68", "42",
       "FC", "01", "F9", "4E", "01", "00", "3E", "B9",
-      "F9", "4E", "01", "00", "AC", "B7"      
+      "F9", "4E", "01", "00", "A4", "B7"      
     ],
 
     // New Loop Hurricane Interpretation
@@ -237,6 +295,13 @@ const matlokPatch =
       "00", "09", "F0", "01", "A8", "42", "F2", "01",
       "68", "42", "FC", "01", "F9", "4E", "01", "00",
       "3E", "B9", "F9", "4E", "0F", "00", "00", "E3"
+    ],
+
+    // Adds Better Player Control To Some Moves (Dancing Head Press)
+    "1041376":
+    [
+      "03", "70", "40", "48", "B9", "4E", "01", "00",
+      "F0", "A7", "F9", "4E", "01", "00", "B8", "A5"
     ]
   }
 }

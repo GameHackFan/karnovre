@@ -36,6 +36,16 @@ const rayPatch =
 
 
 
+    // Close Strong Punch Proximity Changed from 3C to 38
+    // Reduced from 64 to 60 pixels, same as Close Strong Kick
+    "91288": ["38"],
+
+
+    // Far Light Kick Recovery Animation Chunk Duration Changed
+    // From 0303 to 0302
+    // Recovery chunk reduced from 3 to 2 (Full was 6, now it is 5)
+    "391278": ["03", "02"],
+
     // Dynamite Tackle Light Version Animation Behavior Changed
     // From 0354 1F18 to 0354 1F1E
     // Damage increased from 24 to 30
@@ -160,10 +170,11 @@ const rayPatch =
 
 
     // Add Support To New Moves Inputs (Punch Button)
-    "111358":
+    "111350":
     [
-      "F9", "4E", "0F", "00", "00", "E0", "00", "7C",
-      "00", "61", "A0", "B3", "86", "4A"
+      "F9", "4E", "0F", "00", "00", "E0", "28", "4A",
+      "49", "01", "2C", "66", "00", "7C", "B9", "4E",
+      "01", "00", "A8", "66", "86", "4A"
     ],
 
     // Add Support To New Moves Inputs (Kick Button)
@@ -188,7 +199,7 @@ const rayPatch =
       "28", "4A", "FF", "01", "12", "66", "0D", "7C",
       "B9", "4E", "01", "00", "A8", "66", "86", "4A",
       "06", "66", "F9", "4E", "01", "00", "70", "B3",
-      "F9", "4E", "01", "00", "04", "B3"
+      "F9", "4E", "01", "00", "FC", "B2"
     ],
 
     // New Move 1 Interpretation

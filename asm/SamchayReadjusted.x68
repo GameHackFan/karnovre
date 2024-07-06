@@ -5,12 +5,14 @@
 * Description:  All changes made to the code of Samchay Tomyamgun.
 *----------------------------------------------------------------------------------------------
 
-; ORG         $1B9C6                    ; Replace 1B9C6 (There is space to replace everything).
+; ORG         $1B9BE                    ; Replace 1B9BE (There is space to replace everything).
 
                                         ; Block of code that adds the interpretation of the new moves.
   JMP         $FE480                    ; Jumps to the code that handles the interpretation of the new moves.
+  TST.B       ($149, A0)                ; Compares 0 and ($149, A0), fireball flag.
+  BNE         $1B9F8                    ; If it is not 0, active fireball, go to the next move to interpret.
   MOVEQ       #$0, D6                   ; Code from the original game readjusted.
-  BSR         $166A8                    ; Code from the original game readjusted.
+  JSR         $166A8                    ; Code from the original game readjusted.
   TST.L       D6                        ; Code from the original game readjusted.
 
 
@@ -59,13 +61,13 @@
   TST.L       D6                        ; Compares 0 and D6.
   BNE         $FE4BC                    ; If it is not 0, the move wasn't executed, go to the last line.
   MOVE.W      #$106, D7                 ; Stores 106 inside D7, New Move 1 ID (Pap So Cau II).
-  MOVEQ       #$36, D6                  ; Stores 36 inside D6, behavior 3 ID.
-  MOVE.W      #$600, ($1F0, A0)         ; Stores 600 inside ($1F0, A0), translation speed.
+  MOVEQ       #$37, D6                  ; Stores 37 inside D6, behavior 3 ID.
+  MOVE.W      #$000, ($1F0, A0)         ; Stores 000 inside ($1F0, A0), no custom translation speed.
   MOVE.W      #$9B04, ($1F2, A0)        ; Stores 9B04 inside ($1F2, A0), 2nd sound to be played.
   MOVE.W      #$9A0A, ($1F4, A0)        ; Stores 9A0A inside ($1F4, A0), 3rd sound to be played.
   CLR.W       ($1FC, A0)                ; Clears ($1FC, A0), default move code behavior (1A49A).
   JMP         $1BACA                    ; Jumps to the code that executes New Move 1.
-  JMP         $1B9CC                    ; Jumps back to where it stopped in the original code.
+  JMP         $1B9C4                    ; Jumps back to where it stopped in the original code.
 
 
 ; All routines for the readjusted version of Samchay.

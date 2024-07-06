@@ -83,7 +83,7 @@ const zaziePatch =
     // It fixes the animation duration, normally 8 but cancelling it becomes 7
     // It sets the animation duration back to 8 and executes 1C95E
     // This fix ensures the last hit won't grab a wrong damage value
-    "49482": ["0F", "00", "A0", "F3"],
+    // "49482": ["0F", "00", "A0", "F3"],
 
 
 
@@ -139,10 +139,10 @@ const zaziePatch =
     "94884":
     [
       // New Move 1 Light Version
-      "AB", "82", "00", "00",
+      "A7", "82", "00", "00",
 
       // New Move 1 Strong Version (Unused)
-      "AB", "82", "00", "00",
+      "A7", "82", "00", "00",
 
       // New Move 2 Light Version (Unused)
       "00", "80", "00", "00",

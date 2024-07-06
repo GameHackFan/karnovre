@@ -202,7 +202,7 @@ class ROMService
     }
 
     if(!file || file.length != length)
-      throw new Error("The ROM has problems with one of the 3 main CPU files!");
+      throw new Error("The ROM has problems with the main CPU file!");
 
     this.generatedROM["066_kre.p1"] = file;
   }

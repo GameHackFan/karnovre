@@ -5,7 +5,7 @@
 * Description:  All changes made to Clown.
 *----------------------------------------------------------------------------------------------
 
-; ORG         $1C5E0                    ; Replace 1B33E (There is space to replace everything).
+; ORG         $1C5E0                    ; Replace 1C5E0 (There is space to replace everything).
 
                                         ; Block of code that adds the interpretation of the new moves.
   JMP         $FEB80                    ; Jumps to the code that handles the interpretation of the new moves.
@@ -16,7 +16,15 @@
   NOP                                   ; No operation, does nothing.
 
 
-  JMP         $FEB00                    ; Replace 1C686.
+; ORG         $1C674                    ; Replace 1C674 (There is space to replace everything).
+
+                                        ; Block of code that adds the interpretation of the new moves.
+  JMP         $FEB00                    ; Jumps to the code that handles the interpretation of the new moves.
+  MOVEQ       #$6, D6                   ; Code from the original game readjusted.
+  MOVEQ       #$28, D5                  ; Code from the original game readjusted.
+  BSR         $166FC                    ; Code from the original game readjusted.
+  TST.L       D6                        ; Code from the original game readjusted.
+
 
 ; ORG         $FEB00
 
@@ -25,7 +33,7 @@
   BHI         $FEB34                    ; If it is higher than 7F, has at least 50% HP, go to the last line.
   TST.B       ($1FF, A0)                ; Compares 0 and ($1FF + A0), if a DM was executed already.
   BNE         $FEB34                    ; If it is not 0, DM was already used, go to the last line.
-  MOVEQ       #$9, D6                   ; Stores 9 inside D6, D-F-UF input ID.
+  MOVEQ       #$C, D6                   ; Stores C inside D6, 2xQCF input ID.
   JSR         $166A8.L                  ; Calls the routine that interprets the move execution.
   TST.L       D6                        ; Compares 0 and D6.
   BNE         $FEB34                    ; If it is not 0, the move wasn't executed, go to the last line.
@@ -35,8 +43,7 @@
   CLR.L       ($1F2, A0)                ; Clears ($1F2, A0), no extra sound to play.
   CLR.W       ($1FC, A0)                ; Clears ($1FC, A0), default move code behavior (1A49A).
   JMP         $1C6EE                    ; Jumps to the code that executes Spin Kick.
-  LEA         $16488.L, A1              ; Code from the original game that was replaced.
-  JMP         $1C68C                    ; Jumps back to where it stopped in the original code.
+  JMP         $1C67A                    ; Jumps back to where it stopped in the original code.
 
 
 ; ORG         $FEB80
@@ -56,19 +63,22 @@
 
                                         ; Block of code that handles the execution of Tricked.
   CMP.B       #$3, ($120, A0)           ; Compares 3 and ($120 + A0), current animation index
-  BHI         $FEBDE                    ; If it is bigger than 3, can't execute Tricked, go to the last line.
+  BHI         $FEBE0                    ; If it is bigger than 3, can't execute Tricked, go to the last line.
   MOVE.B      ($B1, A0), D0             ; Stores ($B1 + A0) inside D0, buttons pressed.
   AND.W       #$00C0, D0                ; D0 and C0, both kick buttons.
-  BEQ         $FEBDE                    ; If it is 0, didn't press a kick button, go to the last line.
-  MOVE.W      #$F000, D0                ; Stores F000 inside D0, huge negative motion value.
-  OR.W        D0, ($130, A0)            ; ($130 + A0) or D0, applies the huge negative motion.
-  OR.W        D0, ($132, A0)            ; ($132 + A0) or D0, applies the huge negative motion.
+  BEQ         $FEBE0                    ; If it is 0, didn't press a kick button, go to the last line.
+  LSR.B       #4, D0                    ; Shifts right D0 bits by 4, buttons as the right digit.
+  NEG.B       D0                        ; Inverts D0 polarity, 4 to FB, 8 to F7, 6 to F3.
+  ADDQ.B      #$1, D0                   ; Adds 1 to D0, FB to FC, F7 to F8, F3 to F4.
+  MOVE.B      D0, ($130, A0)            ; Stores D0 inside ($130 + A0), applies a negative motion.
+  MOVE.B      D0, ($132, A0)            ; Stores D0 inside ($132 + A0), applies a negative motion.
   JMP         $1A814                    ; Jumps to the code that executes the move.
 
 
 ; All routines for the readjusted version of Clown.
 ; 
-; 01C5E0:   Add Support To New Moves Inputs
-; 0FEB00:   New Move 3 Interpretation (Loop Spin Kick)
-; 0FEB80:   New Move 1 Interpretation (Pick-A-Fake-Card)
-; 0FEBC0:   New Move 2 Execution (Tricked)
+; 01C5E0: Add Support To New Moves Inputs (Punch Button)
+; 01C674: Add Support To New Moves Inputs (Kick Button)
+; 0FEB00: New Move 3 Interpretation (Loop Spin Kick)
+; 0FEB80: New Move 1 Interpretation (Pick-A-Fake-Card)
+; 0FEBC0: New Move 2 Execution (Tricked)

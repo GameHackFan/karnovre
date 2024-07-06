@@ -145,6 +145,13 @@ const samchayPatch =
     // It doesn't change anything, only allows an air version to exist.
     "378090": ["02", "40"],
 
+    // Ti Kau Koun Light Version Animation Behavior Changed From 8007 to 800A
+    // It now travels faster and a longer distance
+    "105218": ["80", "0A"],
+
+    // Ti Kau Koun String Version Animation Behavior Changed From 0009 to 000C
+    // It now travels faster and a longer distance
+    "105238": ["00", "0C"],
 
     // Pap So Cau (LPK Version) Startup Chunk Changed Animation Behavior from A10 to C10
     // It now travels for 2 more frames, he goes further.
@@ -153,6 +160,14 @@ const samchayPatch =
     // Pap So Cau (SPK Version) Startup Chunk Changed Animation Behavior from C10 to E10
     // It now travels for 2 more frames, he goes further.
     "378146": ["10", "0E"],
+
+    // Ti Kau Roi Light Version Animation Behavior Changed From 1000 to 0000
+    // It removes the X translation.
+    "105258": ["00", "00"],
+
+    // Ti Kau Roi Strong Version Active Chunk Changed Animation Behavior from 9002 to 9202
+    // 1st active now causes a knockdown.
+    "389806": ["92", "02"],
 
 
 
@@ -245,10 +260,11 @@ const samchayPatch =
     ],
 
     // Add Support To New Moves Inputs (Punch Button)
-    "113094":
+    "113086":
     [
-      "F9", "4E", "0F", "00", "80", "E4", "00", "7C",
-      "00", "61", "D8", "AC", "86", "4A"
+      "F9", "4E", "0F", "00", "80", "E4", "28", "4A",
+      "49", "01", "2E", "66", "00", "7C", "B9", "4E",
+      "01", "00", "A8", "66", "86", "4A"
     ],
     
     // Check If Air Moves Should Be Interpreted (Kick Button)
@@ -276,12 +292,12 @@ const samchayPatch =
       "28", "0C", "7F", "00", "47", "01", "34", "62",
       "28", "4A", "FF", "01", "2E", "66", "10", "7C",
       "B9", "4E", "01", "00", "A8", "66", "86", "4A",
-      "22", "66", "3C", "3E", "06", "01", "36", "7C",
-      "7C", "31", "00", "06", "F0", "01", "7C", "31",
+      "22", "66", "3C", "3E", "06", "01", "37", "7C",
+      "7C", "31", "00", "00", "F0", "01", "7C", "31",
       "04", "9B", "F2", "01", "7C", "31", "0A", "9A",
       "F4", "01", "68", "42", "FC", "01", "F9", "4E",
       "01", "00", "CA", "BA", "F9", "4E", "01", "00",
-      "CC", "B9"
+      "C4", "B9"
     ]
   }
 }

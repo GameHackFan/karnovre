@@ -1,4 +1,153 @@
 ****************************************************************************************
+Version 0.2 Changes
+****************************************************************************************
+
+- Ray changes:
+- Improved his 3rd palette (palette provided by PolarBair from FHD community).
+- Improved his 5th palette (palette provided by Leót Buddy from FHD community).
+- Replaced his 4th and 6th palette with new ones (palettes provided by PolarBair from FHD community).
+- Close SP proximity range changed from 60 to 56 pixels of distance.
+- Far LK recovery reduced from 6 to 5 (suggestion from the FHD community, YuriBestGirl).
+- Fixed a bug where he couldn't execute Thunder Dynamite Tackle if his own fireball was
+  active in the screen.
+
+
+- Feilin changes:
+- Improved her 4th palette (palette provided by Leót Buddy from FHD community).
+
+
+- Ryoko changes:
+- Jump SK strikebox increased by 2 pixels downwards
+  (suggestion from the FHD community, YuriBestGirl).
+- Improved Tateshihou Gatame assembly code to reduce the probability of bugs.
+
+
+- Matlok Changes:
+- Improved his 5th palette (palette provided by Leót Buddy from FHD community).
+- Walkover Kick damage reduced from 40 to 36 (idea from the FHD community, Golden Shades).
+- Walkover Kick recovery increased by 2 frames (idea from the FHD community, Golden Shades).
+- Dancing Head Press impulse upwards and backwards were drastically reduced.
+- Visually improved the startup animation of his Far SP
+  (data provided by Leót Buddy from FHD community).
+- Crouch Strong Punch 2nd chunk of active hurtboxes improved, removed head hurbox,
+  top hurtbox was reduced by 4 pixels upwards, weakspot hurtbox was reduced by 19 pixels
+  upwards and increased 1 pixel downwards (idea from the FHD community, Golden Shades).
+- Dancing Head Press strikebox improved, increased 5 pixels downwards, 1 upward, 1 left, 1 right.
+  (idea from the FHD community, Golden Shades).
+- Added an extra code that gives player better control to Dancing Head Press.
+  (idea from the FHD community, Golden Shades).
+- Hurricane Strong Kick impulse upwards reduced, animation also tweaked to fit this change.
+  (idea from the FHD community, Leót Buddy).
+- Fixed a bug where he couldn't execute Walkover Kick or Loop Walkover Kick if his own
+  fireball was active in the screen.
+
+
+- Samchay changes:
+- Increased Ti Kau Koun LK and SK speed (idea from the FHD community, Golden Shades).
+- Increased Air Ti Kau Koun LK and SK speed (idea from the FHD community, Golden Shades).
+- Removed Ti Kau Roi LK horizontal translation.
+- Ti Kau Roi 1st hit now causes a knockdown.
+- Increased Pap So Cau II speed to better connect with combos
+  (idea from the FHD community, Golden Shades).
+- Fixed a bug where he couldn't execute Pap So Cau II if his own fireball was active
+  in the screen.
+
+
+- Lee changes:
+- Long Ti now has a height restriction to be executed
+  (idea from the FHD community, Kyro / Golden Shades).
+- Long Ti is no longer an overhead move (idea from the FHD community, many people).
+- Zesshouhohou damage reduced from 32 to 28
+  (idea from the FHD community, Mibeador / YuriBestGirl).
+- Super Zesshouhohou damage reduced from 32 to 24
+  (idea from the FHD community, Mibeador / YuriBestGirl).
+- Chou Shinchuu damage increased from 32 to 38
+  (idea from the FHD community, Mibeador / YuriBestGirl).
+- Tetsuzankou damage reduced from 28 to 24
+  (idea from the FHD community, Mibeador / YuriBestGirl).
+
+
+- Mizoguchi changes:
+- Close SK 1st hit cancel brought back (FHD community request).
+- Kuuchuu Renzoku Keri damage changed from 10/12/14/16 to 4/4/4/4.
+- Improved his 3rd, 5th and 7th palette
+  (some improvements provided by Leót Buddy from FHD community).
+- Tsuutensai 3rd hit strikebox increased downwards by 20 pixels to hit crouched opponents.
+- Fixed a bug that was still allowing him to cancel the 1st hit of his Close SK.
+
+
+- Jean changes:
+- Backflip input changed to QCB (idea from the FHD community, YuriBestGirl).
+- Fixed a bug where he couldn't execute Backflip if his own fireball was active in the screen.
+- Reduced Crouch SP head hurtbox, reduced width and height by 4 and 2 pixels, and repositioned it
+  (idea from the FHD community, YuriBestGirl).
+- Backflip move sound effect is now being played when it is closer to the moment he kicks
+  (idea from the FHD community, Golden Shades).
+- Removed Needle Shower bug fix, it only fixed partially the bug, so a damage mitigation
+  solution is being used instead.
+
+
+- Marstorius changes:
+- Triple Dash Lariat input changed from charge B-QCF + Kick to 2x QCF + Kick
+  (idea from the FHD community, Golden Shades).
+
+
+- Yungmie changes:
+- Crouch SP foot hurtbox increased by 9 pixels upwards and 1 downwards
+  (idea from the FHD community, Golden Shades).
+- Foot Rush recovery increased by 2 frames (idea from the FHD community, Golden Shades).
+
+
+- Zazie changes:
+- Changed Hell Deshi Kakato starting sound (idea from the FHD community, Golden Shades).
+- Removed Vulcan Hook bug fix, it only fixed partially the bug, so a damage mitigation
+  solution is being used instead.
+
+
+- Clown changes:
+- Improved his 3rd, 4th palette.
+- Replaced his 8th palette with a new one (palette provided by Louie from FHD community).
+- Close SP proximity range changed from 64 to 60 pixels of distance.
+- Tricked move behavior changed, it now has 3 different speed by pressing LK / SK / LK+SK.
+- Spin Kick input changed from charge B-QCF-UF + Kick to 2x QCF + Kick
+  (idea from the FHD community, Golden Shades).
+
+
+- Karnov changes:
+- Replaced his 3rd palette with a new one (palette provided by Louie from FHD community).
+- Super Balloon Attack vulnerability reduced from 6 to 3 frames.
+- Super 100 Kick recovery increased by 3 frames.
+- Super 100 Kick all 3 kicks strikebox increased by 8 pixels and added a foot hurtbox.
+- Glitch move recovery increased by 4 frames
+  (idea from the FHD community, Mibeador / YuriBestGirl / Golden Shades).
+- Super 100 Kick changed back to charge B-F + Kick, QCB was conflicting with Glitch
+  (idea from the FHD community, Kyro / Golden Shades).
+
+
+- Select Screen changes:
+- Improved Select Screen initialization extra code, it better clears the players memory region.
+
+
+- Game changes:
+- Added a code that readjusts any attack that has 96+ base damage to 32 base damage,
+  this is a mitigation strategy to not allow any move to do a massive damage via bugs,
+  only Zazie / Jean hands attacks are known to do that.
+- Changed the Revenge Move Indicator, now the character name blinks instead of having a
+  label to indicate you can execute your Revenge Move.
+- Changed the way the Dizzy System works to try to better balance it, now it is match
+  based instead of round based. (Clayton Chapman's idea).
+- Changed the amount of hits characters have to take to fall dizzy from 5 to 4, now that
+  it is match based, it is not that important a high amount of hits.
+- Changed the amount of iterations the dizzy animation is executed from 6 to 3.
+  (idea from the FHD community, Golden Shades).
+- Added a hit counter (idea from the FHD community, Orig4mi / Kyro).
+- Fixed a bug where if both players trade blows at the end of the round, the player who
+  wins the round doesn't compute the hit.
+- Fixed a bug where if both players trade blows at the end of the round, the player who
+  wins the round doesn't compute the hit.
+- Added a 3rd palette to the stages (palettes provided by Golden Shades from FHD community).
+
+****************************************************************************************
 Version 0.1 Changes
 ****************************************************************************************
 
@@ -246,8 +395,8 @@ Version 0.1 Changes
   (don't trust the lifebar it is unreliable, it shows around 42%-)
 - Revenge Moves can be executed only once per round.
 - An indicator next to your lifebar is displayed when you're able to execute a Revenge Move.
-- P1 1 frame of strike hit freeze disadvantage bug fixed, both players now have the same amount of hit freeze frames.
-
+- P1 1 frame of strike hit freeze disadvantage bug fixed, both players now have the same
+  amount of hit freeze frames.
 
 ****************************************************************************************
 

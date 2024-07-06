@@ -16,15 +16,27 @@ const mizoguchiPatch =
 
 
 
+    // Animation B25 Hitboxes Changed From (Tsuutensai)
+    // From A010 2818 to AA10 3218
+    // Increased strikebox downward by 20 pixels, to hit crouched opponents.
+    "362276": ["AA", "10", "32", "18"],
+
+
+
     // Throw Strong Kick vs Zazie Bug Fix
     // From F206 to F208
     // Translation distance changed by 2 pixels to fix throwing Zazie as P2
-    "399786": ["00", "02"],
+    "399786": ["F2", "08"],
 
     // Close Strong Kick Active Animation Chunk Behavior Changed
     // From 0802 to 0002
     // 1st hit is not cancelable anymore
-    "379730": ["00", "02"],
+    // "379730": ["00", "02"],
+
+    // Close Strong Kick Active Animation Chunk Behavior Changed
+    // From 0801 to 0001
+    // 1st hit is not cancelable anymore
+    // "379734": ["00", "01"],
 
     // Tiger Bazooka Startup Animation Chunk Behavior Changed
     // From 020C to 020B
@@ -36,17 +48,37 @@ const mizoguchiPatch =
     // Recovery chunk reduced from 26 to 25 (Full was 30, now it is 29)
     "380106": ["02", "19"],
 
-    // Kuuchuu Renzoku Keri Startup Animation Chunk Behavior Changed
+    // Kuuchuu Renzoku Keri 1st Animation Behavior Changed
+    // From 0111 110A to 0111 1104
+    // Damage reduced from 10 to 4
+    "411304": ["01", "11", "11", "04"],
+
+    // Kuuchuu Renzoku Keri 2nd Animation Behavior Changed
+    // From 0112 110C to 0112 1106
+    // Damage reduced from 12 to 6
+    "411308": ["01", "12", "11", "06"],
+
+    // Kuuchuu Renzoku Keri 3rd Animation Behavior Changed
+    // From 0113 110E to 0113 1104
+    // Damage reduced from 14 to 4
+    "411312": ["01", "13", "11", "04"],
+
+    // Kuuchuu Renzoku Keri 4th Animation Behavior Changed
+    // From 0114 1110 to 0114 1104
+    // Damage reduced from 16 to 4
+    "411312": ["01", "14", "11", "04"],
+
+    // Kuuchuu Renzoku Keri 5th Startup Animation Chunk Behavior Changed
     // From 1002 to 1003
     // Startup chunk increased from 2 to 3 (Full was 8, now it is 10)
     "384198": ["10", "03"],
 
-    // Kuuchuu Renzoku Keri Startup Animation Chunk Behavior Changed
+    // Kuuchuu Renzoku Keri 5th Startup Animation Chunk Behavior Changed
     // From 0002 to 0003
     // Startup chunk increased from 2 to 3 (Full was 8, now it is 10)
     "384202": ["00", "03"],
 
-    // Kuuchuu Renzoku Keri Animation Behavior Changed
+    // Kuuchuu Renzoku Keri 5th Animation Behavior Changed
     // From 8357 1130 to 8367 1130
     // It is now an overhead
     "411320": ["83", "67", "11", "30"],

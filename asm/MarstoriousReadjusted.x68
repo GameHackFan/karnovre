@@ -25,15 +25,17 @@
   BHI         $FE842                    ; If it is higher than 7F, has at least 50% HP, go to the last line.
   TST.B       ($1FF, A0)                ; Compares 0 and ($1FF + A0), if the player used the DM already.
   BNE         $FE842                    ; If it is not 0, DM was already used, go to the last line.
-  MOVEQ       #$6, D6                   ; Stores 7 inside D6, B-F input ID.
-  MOVEQ       #$28, D5                  ; Stores 28 inside D5, 40 frames of charge.
-  JSR         $166FC.L                  ; Calls the routine that interprets the move execution.
-  TST.L       D6                        ; Compares 0 and D6.
-  BNE         $FE842                    ; If it is not 0, the move wasn't executed, go to the last line.
-  MOVEQ       #$0, D6                   ; Stores 0 inside D6, QCF input ID.
+  NOP                                   ; No operation, does nothing.
+  MOVEQ       #$C, D6                   ; Stores C inside D6, 2xQCF input ID.
   JSR         $166A8.L                  ; Calls the routine that interprets the move execution.
   TST.L       D6                        ; Compares 0 and D6.
   BNE         $FE842                    ; If it is not 0, the move wasn't executed, go to the last line.
+  NOP                                   ; No operation, does nothing.
+  NOP                                   ; No operation, does nothing.
+  NOP                                   ; No operation, does nothing.
+  NOP                                   ; No operation, does nothing.
+  NOP                                   ; No operation, does nothing.
+  NOP                                   ; No operation, does nothing.
   MOVE.W      #$1CA, D7                 ; Stores 1CA inside D7, New Move 1 ID (Triple Dash Lariat).
   MOVEQ       #$36, D6                  ; Stores 36 inside D6, behavior 3 ID.
   MOVE.W      #$800, ($1F0, A0)         ; Stores 800 inside ($1F0, A0), translation speed.

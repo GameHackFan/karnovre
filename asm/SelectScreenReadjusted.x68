@@ -241,7 +241,7 @@
   MOVEQ       #$0, D0                   ; Stores 0 inside D0, sprite flag.
   ADD.W       D1, D0                    ; Adds D1 to D0, sprite orientation, P1 is 0, P2 is 1.
   MOVE.B      D0, ($21, A1)             ; Stores D0 inside ($21 + A1), the player sprite flag.
-  CLR.B       ($14A, A1)                ; Clears ($14A + A1), the weak spot points.
+  BSR         $8F4D0                    ; Calls the code that cleans the player memory region.
   MOVE.W      D1, D0                    ; Stores D1 inside D0, the player ID.
   LSL.W       #$2, D0                   ; Shifts left D0 bits by 2, 0 to 0, 1 to 4.
   ADD.W       D1, D0                    ; Adds D1 to D0, 0 to 0, 4 to 5.
@@ -283,6 +283,17 @@
   ADDQ.W      #$1, ($172, A4)           ; Adds 1 to ($172 + A4), the amount of times it randomized.
   AND.L       #$00FFFF, D5              ; D5 and FFFF, 16 bits randomizer.
   MOVE.W      D5, ($174, A4)            ; Stores D5 inside ($174 + A4), the new seed.
+  RTS                                   ; Returns back to the routine that called this code.
+
+
+; ORG         $8F4D0
+
+                                        ; Block of code that clears the player memory region.
+  MOVE.W      #$160, D0                 ; Stores 160 inside D0, player memory region offset to clean.
+  SUBQ.W      #$4, D0                   ; Subtracts 4 from D0, go to the next region to clean.
+  CLR.L       (A1, D0.W)                ; Clears (A1 + D0.W), cleans flags, weakspot, hitshake, etc.
+  TST.B       D0                        ; Compares 0 and D0, only right side byte.
+  BNE         $8F4D4                    ; If it is not 0, keep cleaning, go to the 2nd line of code.
   RTS                                   ; Returns back to the routine that called this code.
 
 
@@ -365,6 +376,7 @@
 ; 08F3C0:   Randomizes CPU Pallete
 ; 08F400:   Resets Player Data (Select Screen Init)
 ; 08F480:   Randomizes A Value In D5
+; 08F4D0:   Clears Player Memory Region Flags (Weakspot, Hitshake, Etc)
 ; 08F500:   Randomizes Character And Pallete (Start Pressed)
 ; 08F540:   Updates The Sprite
 ; 08F580:   Resets Select Screen Data (Select Screen Init)

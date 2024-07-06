@@ -40,6 +40,33 @@ const karnovPatch =
     // Same physicsbox as the crouch animation
     "333588": ["E6", "00", "1A", "11"],
 
+    // Animation 920 Boxes Changed (Super 100 Kick - 1st Kick)
+    // From 0000 0000 A6FE 0414 A620 1020 to A620 060C A6FE 0414 A624 1024
+    // Strikebox increased by 8 pixels forwards, Foot hurtboxes added.
+    "337452":
+    [
+      "A6", "20", "06", "0C", "A6", "FE", "04", "14",
+      "A6", "24", "10", "24"
+    ],
+
+    // Animation 924 Boxes Changed (Super 100 Kick - 2nd Kick)
+    // From 0000 0000 A6FE 0414 C020 1020 to C020 060C A6FE 0414 C024 1024
+    // Strikebox increased by 8 pixels forwards, Foot hurtboxes added.
+    "337644":
+    [
+      "C0", "20", "06", "0C", "A6", "FE", "04", "14",
+      "C0", "24", "10", "24"
+    ],
+
+    // Animation 928 Boxes Changed (Super 100 Kick - 3rd Kick)
+    // From 0000 0000 A6FE 0414 C020 1020 to D81C 060C A6FE 0414 D81C 1024
+    // Strikebox increased by 8 pixels forwards, Foot hurtboxes added.
+    "337836":
+    [
+      "D8", "1C", "06", "0C", "A6", "FE", "04", "14",
+      "D8", "1C", "10", "24"
+    ],
+
     // New Animation B6C Identical to 92E But With Hurtboxes (Balloon Attack)
     "365648":
     [
@@ -94,15 +121,35 @@ const karnovPatch =
     // From 0B04 to 0F04, It is now cancelable.
     "385358": ["0F", "04"],
 
+    // Balloon Attack Light Version Startup Animation Chunk Behavior Changed
+    // From 4008 to 400B
+    // Invulnerability chunk increased from 8 to 11 frames.
+    "388658": ["40", "0B"],
+
     // Balloon Attack Light Version Startup Chunk Changed Animation 92E to B6C
     // New animation, similar but 92E is invulnerable, B6C is not.
     // This chunk of this move is not invulnerable anymore.
     "388660": ["6C", "0B"],
 
+    // Balloon Attack Light Version Startup Animation Chunk Behavior Changed
+    // From 4006 to 4003
+    // Vulnerability chunk reduced from 6 to 3 frames.
+    "388662": ["40", "03"],
+
+    // Balloon Attack Strong Version Startup Animation Chunk Behavior Changed
+    // From 4018 to 401B
+    // Invulnerability chunk increased from 24 to 27 frames.
+    "388698": ["40", "1B"],
+
     // Balloon Attack Strong Version Startup Chunk Changed Animation 92E to B6C
     // New animation, similar but 92E is invulnerable, B6C is not.
     // This chunk of this move is not invulnerable anymore.
     "388700": ["6C", "0B"],
+
+    // Balloon Attack Light Version Startup Animation Chunk Behavior Changed
+    // From 4006 to 4003
+    // Vulnerability chunk reduced from 6 to 3 frames.
+    "388702": ["40", "03"],
 
     // Super 100 Kick Both Version Animation Behavior Changed
     // From 83D2 0518 to 8312 0518
@@ -113,6 +160,11 @@ const karnovPatch =
     // From 00C3 4433 to 0043 4433
     // The hit now causes less stun, which fixes the infinite.
     "95228": ["00", "43", "44", "33"],
+
+    // Super 100 Kick Both Version Recovery Chunk Changed
+    // From 0304 to 0307
+    // Recovery Chunk increased from 4 to 7 (Full was 9, now it is 12)
+    "385802": ["03", "07"],
 
     // Crouch Strong Kick Animation Code Behavior Changed from 1A49A to FF290
     // It forces the default speed 0500 0500 and cleans the translation increase memory.
@@ -195,8 +247,9 @@ const karnovPatch =
       "73", "0B", "10", "01", "73", "0B", "00", "04", 
 
       "CF", "08", "00", "02", "73", "0B", "00", "02",
-      "D0", "08", "00", "02", "CE", "08", "00", "02",
-      "72", "0B", "00", "02", "71", "0B", "01", "02"
+      "D0", "08", "00", "02", "CF", "08", "00", "02",
+      "CE", "08", "00", "03", "72", "0B", "00", "03",
+      "71", "0B", "01", "02"
     ],
 
     // New Move 2 Light Version Animation
@@ -235,8 +288,8 @@ const karnovPatch =
     // Add Support To New Moves Inputs
     "116706":
     [
-      "F9", "4E", "0F", "00", "50", "EC", "01", "7C",
-      "B9", "4E", "01", "00", "A8", "66", "86", "4A"
+      "F9", "4E", "0F", "00", "50", "EC", "06", "7C",
+      "28", "7A", "00", "61", "0E", "9F", "86", "4A"
     ],
     
     // New Move 1 Interpretation

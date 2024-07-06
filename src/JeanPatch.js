@@ -34,10 +34,12 @@ const jeanPatch =
     "342384": ["A7", "4F", "08", "10"],
 
     // Animation 996 Hitboxes Changed (Crouch Strong Punch)
-    // Head Hurtbox changed from C113 0818 to B830 1014
-    // Reduced width by 4 pixels, increased height by 8 pixels
-    // Moved forward by 23 pixels, Moved upward by 9 pixels
-    "343096": ["B8", "30", "10", "14"],
+    // Head Hurtbox changed from C113 0818 to BA2E 0E10
+    // Reduced width by 8 pixels, increased height by 6 pixels
+    // Moved forward by 25 pixels, moved upward by 27 pixels
+    "343096": ["BA", "2E", "0E", "10"],
+
+
 
     // New Animation B74 Identical to 945 But Without The Throwbox (New Move 1, New Move 2)
     "366032":
@@ -55,18 +57,18 @@ const jeanPatch =
     // Needle Shower Light Version Animation Behavior Changed
     // From 81D1 C30A to 81D1 C31A
     // Damage increased from 10 to 14
-    "411484": ["81", "D1", "C3", "0E"],
+    // "411484": ["81", "D1", "C3", "0E"],
 
     // Needle Shower Strong Version Animation Behavior Changed
     // From 81D1 C30A to 81D1 C31A
     // Damage increased from 10 to 14
-    "411488": ["81", "D1", "C3", "0E"],
+    // "411488": ["81", "D1", "C3", "0E"],
 
     // Needle Shower Code Behavior Changed From 1C95E to FF340
     // It fixes the animation duration, normally 8 but cancelling it becomes 7
     // It sets the animation duration back to 8 and executes 1C95E
     // This fix ensures the last hit won't grab a wrong damage value
-    "48914": ["0F", "00", "A0", "F3"],
+    // "48914": ["0F", "00", "A0", "F3"],
 
 
 
@@ -139,9 +141,9 @@ const jeanPatch =
     [
       "74", "0B", "00", "02", "47", "09", "00", "02",
       "34", "0B", "02", "06", "AF", "09", "12", "04",
-      "35", "0B", "02", "03", "B0", "09", "82", "04",
+      "35", "0B", "02", "03", "B0", "09", "02", "04",
       "36", "0B", "02", "04", "37", "0B", "02", "03",
-      "38", "0B", "00", "03", "5A", "09", "00", "03",
+      "38", "0B", "00", "03", "5A", "09", "80", "03",
       "A6", "09", "02", "30", "36", "09", "23", "01"
     ],
 
@@ -158,10 +160,11 @@ const jeanPatch =
 
 
     // Add Support To New Moves Inputs (Punch Button)
-    "114204":
+    "114196":
     [
-      "F9", "4E", "0F", "00", "00", "E7", "06", "7C",
-      "28", "7A", "00", "61", "D4", "A8", "86", "4A"
+      "F9", "4E", "0F", "00", "00", "E7", "28", "4A",
+      "49", "01", "30", "66", "06", "7C", "28", "7A",  // 30 60 change it
+      "B9", "4E", "01", "00", "FC", "66", "86", "4A"
     ],
 
     // Add Support To New Moves Inputs (Kick Button)
@@ -177,11 +180,11 @@ const jeanPatch =
     // New Move 1 Interpretation
     "1042176":
     [
-      "07", "7C", "28", "7A", "B9", "4E", "01", "00",
-      "FC", "66", "86", "4A", "14", "66", "3C", "3E",
+      "01", "7C", "71", "4E", "B9", "4E", "01", "00",
+      "A8", "66", "86", "4A", "14", "66", "3C", "3E",
       "92", "01", "A9", "7C", "00", "61", "0A", "0D",
       "40", "11", "E0", "01", "F9", "4E", "01", "00",
-      "7C", "BF", "F9", "4E", "01", "00", "22", "BE"
+      "7C", "BF", "F9", "4E", "01", "00", "1A", "BE"
     ],
 
     // New Move 2 Interpretation

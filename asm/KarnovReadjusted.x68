@@ -9,8 +9,9 @@
 
                                         ; Block of code that adds the interpretation of the new moves.
   JMP         $FEC50                    ; Jumps to the code that handles the interpretation of the new moves.
-  MOVEQ       #$1, D6                   ; Stores 1 inside D6, QCB input ID.
-  JSR         $166A8                    ; Code from the original game readjusted.
+  MOVEQ       #$6, D6                   ; Stores 6 inside D6, B-F input ID.
+  MOVEQ       #$28, D5                  ; Stores 28 inside D5, 40 frames of charge.
+  BSR         $166FC                    ; Calls the routine that interprets the move execution.
   TST.L       D6                        ; Code from the original game readjusted.
 
 

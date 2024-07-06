@@ -5,6 +5,23 @@
 * Description:  All changes made to the code of Ryoko Kano.
 *----------------------------------------------------------------------------------------------
 
+; ORG         $1B5C0                    ; Replace 1B5C0 (There is space to replace everything).
+
+                                        ; Block of code that adds the interpretation of the new moves.
+  JSR         $FE2E0                    ; Calls the code that clears Tateshihou Gatame cancel flag.
+  TST.B       ($14D, A0)                ; Code from the original game readjusted.
+  BNE         $1B774                    ; Code from the original game.
+  MOVE.B      ($B1, A0), D7             ; Code from the original game.
+  LSR.B       #$4, D7                   ; Code from the original game.
+  BEQ         $1B774                    ; Code from the original game.
+  MOVE.B      D7, D0                    ; Code from the original game.
+  AND.B       #$3, D0                   ; Code from the original game.
+  BEQ         $1B6AC                    ; Code from the original game.
+  MOVEQ       #$2, D6                   ; Stores 8 inside D6, HCF input ID.
+  JSR         $166A8.L                  ; Calls the routine that interprets the move execution.
+  TST.L       D6                        ; Compares 0 and D6.
+
+
 ; ORG         $1B650                    ; Replace 1B650 (There is space to replace everything).
 
                                         ; Block of code that handles the execution of Bakushin.
@@ -60,23 +77,20 @@
                                         ; Block of code that handles the initial execution of Tateshihou Gatame.
   BSR         $FF340                    ; Calls the code that stores the opponent memory region in A1.
   MOVE.W      ($D0, A0), D0             ; Stores ($D0 + A0) inside D0, the current move ID.
-  CMP.W       #$98, D0                  ; Compares 98 and D0, Tateshihou Gatame ID.
-  BNE         $FE272                    ; If it is not 98, ignore the line below.
-  CLR.W       ($1E0, A0)                ; Clears ($1E0, A0), Tateshihou Gatame cancel flag.
   CMP.W       #$95, D0                  ; Compares 95 and D0, Tomoenage ID.
-  BNE         $FE28E                    ; If it is not 95, not Tomoenage, go to the BTST line.
+  BNE         $FE284                    ; If it is not 95, not Tomoenage, go to the BTST line.
   TST.B       ($1E0, A0)                ; Compares 0 and ($1E0, A0), Tateshihou Gatame flag.
-  BEQ         $FE28E                    ; If it is 0, didn't execute Tateshihou Gatame, go to the BTST line.
+  BEQ         $FE284                    ; If it is 0, didn't execute Tateshihou Gatame, go to the BTST line.
   CMP.W       #$2, ($120, A0)           ; Compares 2 and ($120, A0), the current animation and duration.
-  BHI         $FE28E                    ; If it is bigger than 2, don't change move, go to the BTST line.
+  BHI         $FE284                    ; If it is bigger than 2, don't change move, go to the BTST line.
   JSR         $1B674                    ; Calls the code that handles the execution of Tateshihou Gatame.
-  BRA         $FE2D0                    ; Jumps to the 1st JMP line of code (1AC1E).
+  BRA         $FE2C6                    ; Jumps to the last JMP line of code (1ACA4).
   BTST        #$0, ($BF, A0)            ; Compares 0 and the 1st bit of ($BF + A0).
-  BNE         $FE2D0                    ; If it is not 0, go to the last JMP line (1ACA4).
+  BNE         $FE2C6                    ; If it is not 0, go to the last JMP line (1ACA4).
   MOVE.B      ($14F, A0), D0            ; Stores ($14F + A0) inside D0, behavior 3 ID.
-  BEQ         $FE2CA                    ; If it D0 is 0, go to the 3rd JMP line (1B1DE).
+  BEQ         $FE2C0                    ; If it D0 is 0, go to the 3rd JMP line (1B1DE).
   CMP.B       #$5A, D0                  ; Compares 2A and D0, Tateshihou Gatame range.
-  BNE         $FE2C4                    ; If it is not 2A, not Tateshihou Gatame, go to the 2nd JMP line (1B11C).
+  BNE         $FE2BA                    ; If it is not 2A, not Tateshihou Gatame, go to the 2nd JMP line (1B11C).
   MOVE.W      #$95, ($D0, A0)           ; Stores 95 inside ($D0 + A0), Tateshihou Gatame ID.
   MOVE.B      #$1A, ($12D, A0)          ; Stores 1A inside ($D0 + A0), behavior 3 ID.
   MOVE.B      #$1, ($1FF, A0)           ; Stores 1 inside ($1FF, A0), DM executed flag active.
@@ -88,9 +102,20 @@
   JMP         $1ACA4                    ; Jumps to the code that handles the execution of other move.
 
 
+; ORG         $FE2E0
+
+
+  CMP.W       #$95, ($D0, A0)           ; Compares 95 and ($D0 + A0), Tomoenage ID.
+  BEQ         $FE2EC                    ; If it is not 95, ignore the line below.
+  CLR.B       ($1E0, A0)                ; Clears ($1E0, A0), Tateshihou Gatame cancel flag.
+  RTS                                   ; Returns back to the routine that called this code.
+
+
 ; All routines for the readjusted version of Ryoko.
 ; 
+; 01B5C0:   Add Support To Clear Flag Code
 ; 01B650:   New Move 1 Interpretation (Bakushin)
 ; 01B6C0:   Add Support To New Moves Inputs
 ; 0FE200:   Prepares The Execution Of Tateshihou Gatame
 ; 0FE260:   Handles The Initial Execution Of Tateshihou Gatame
+; 0FE2E0:   Clears Tateshihou Gatame Cancel Flag

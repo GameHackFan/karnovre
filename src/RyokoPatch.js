@@ -7,7 +7,7 @@ const ryokoPatch =
   data:
   {
     // Chou Yama Arashi, Ippon Seoi, Kuuchuu Ippon Seoi Input ID Change (HCF)
-    "112094": ["02"],
+    // "112094": ["02"],
 
     // Chou Yama Arashi, Ippon Seoi, Kuuchuu Ippon Seoi Input ID Change (HCB)
     "112110": ["03"],
@@ -53,11 +53,11 @@ const ryokoPatch =
     // Increased 8 pixels backwards, it is now a better cross
     // Moved 3 pixels downwards
     "270596": ["C8", "07", "12", "16"],
-    
+
     // Animation 3B0 Hitboxes Changed (Jump Strong Kick)
-    // Strikebox increased from C717 0B24 to C717 0D27
-    // Increased 2 pixels upwards, downwards and 6 pixels backwards
-    "270644": ["C7", "14", "0D", "27"],
+    // Strikebox increased from C717 0B24 to C614 0E27
+    // Increased 2 pixels upwards, 4 pixels downwards and 6 pixels backwards
+    "270644": ["C6", "14", "0E", "27"],
 
     // Animation 381 Hitboxes Changed (Close and Far Light Kick)
     // Added a grab hitbox, it is necessary to ensure the super will work
@@ -211,6 +211,16 @@ const ryokoPatch =
     ],
 
 
+    // Add Support To Clear Flag Code
+    "112064":
+    [
+      "B9", "4E", "0F", "00", "E0", "E2", "28", "4A",
+      "4D", "01", "00", "66", "A8", "01", "28", "1E",
+      "B1", "00", "0F", "E8", "00", "67", "9E", "01",
+      "07", "10", "3C", "C0", "03", "00", "00", "67",
+      "CC", "00", "02", "7C", "B9", "4E", "01", "00",
+      "A8", "66", "86", "4A"
+    ],
 
     // Add Support To New Moves Inputs
     "112320":
@@ -248,20 +258,26 @@ const ryokoPatch =
     "1040992":
     [
       "00", "61", "DE", "10", "28", "30", "D0", "00",
-      "7C", "B0", "98", "00", "04", "66", "68", "42",
-      "E0", "01", "7C", "B0", "95", "00", "16", "66",
-      "28", "4A", "E0", "01", "10", "67", "68", "0C",
-      "02", "00", "20", "01", "08", "62", "B9", "4E",
-      "01", "00", "74", "B6", "42", "60", "28", "08",
-      "00", "00", "BF", "00", "3A", "66", "28", "10",
-      "4F", "01", "2E", "67", "3C", "B0", "5A", "00",   // 5A was 2A
-      "22", "66", "7C", "31", "95", "00", "D0", "00",
-      "7C", "11", "1A", "00", "2D", "01", "7C", "11",
-      "01", "00", "FF", "01", "7C", "11", "01", "00",
-      "E0", "01", "00", "61", "A4", "10", "F9", "4E",
-      "01", "00", "1E", "AC", "F9", "4E", "01", "00",
-      "1C", "B1", "F9", "4E", "01", "00", "DE", "B1",
-      "F9", "4E", "01", "00", "A4", "AC"
+      "7C", "B0", "95", "00", "16", "66", "28", "4A",
+      "E0", "01", "10", "67", "68", "0C", "02", "00",
+      "20", "01", "08", "62", "B9", "4E", "01", "00",
+      "74", "B6", "42", "60", "28", "08", "00", "00",
+      "BF", "00", "3A", "66", "28", "10", "4F", "01",
+      "2E", "67", "3C", "B0", "5A", "00", "22", "66",   // 5A was 2A
+      "7C", "31", "95", "00", "D0", "00", "7C", "11",
+      "1A", "00", "2D", "01", "7C", "11", "01", "00",
+      "FF", "01", "7C", "11", "01", "00", "E0", "01",
+      "00", "61", "AE", "10", "F9", "4E", "01", "00",
+      "1E", "AC", "F9", "4E", "01", "00", "1C", "B1",
+      "F9", "4E", "01", "00", "DE", "B1", "F9", "4E",
+      "01", "00", "A4", "AC"
+    ],
+
+    // Clears Tateshihou Gatame Cancel Flag
+    "1041120": 
+    [
+      "68", "0C", "95", "00", "D0", "00", "04", "67",
+      "28", "42", "E0", "01", "75", "4E"
     ]
   }
 }

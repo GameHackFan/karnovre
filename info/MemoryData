@@ -1,8 +1,10 @@
 103670:   P1 Character Memory Region.
+101003:   Set it to 09 to activate debug sprites.
 
 
 xxxx92:   Animation ID.
 xxxxB8:   Select Screen Character Confirmed (2nd bit is active if confirmed)
+xxxxBC.B: Character Hitstun Flag (0 no hitstun, 1 hitstun)
 xxxxC0:   Position X
 xxxxC4:   Position Y
 xxx191:   Animation Duration.
