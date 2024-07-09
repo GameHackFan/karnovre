@@ -115,11 +115,9 @@ class ROMService
 
   getGeneratedROM = () =>
   {
-    // TODO: Remove these lines
-    this.generatedROM["066eh.p1"] = this.generatedROM["066_kre.p1"];
+    this.generatedROM["066-p1kre.p1"] = this.generatedROM["066_kre.p1"];
     delete this.generatedROM["066_kre.p1"];
-
-
+    delete this.generatedROM["066-p1.p1"];
     return this.generatedROM;
   }
 
